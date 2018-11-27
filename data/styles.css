@@ -14,6 +14,8 @@
 }
 .box_2 {
 }
+.box_3 {
+}
 .ellipse {
 }
 .shape {
@@ -26,6 +28,9 @@
 }
 .primary_button {
   color:#FFFFFF;
+}
+.link_button {
+  color:#169BD5;
 }
 .heading_1 {
   font-family:'Arial Normal', 'Arial';
