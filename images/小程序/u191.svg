@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" width="46px" height="43px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <g transform="translate(-63 -801 )">
-    <path d="M 86 801  C 98.88 801  109 810.46  109 822.5  C 109 834.54  98.88 844  86 844  C 73.12 844  63 834.54  63 822.5  C 63 810.46  73.12 801  86 801  Z " fill-rule="nonzero" fill="#ffffff" stroke="none" />
-    <path d="M 86 801.5  C 98.6 801.5  108.5 810.74  108.5 822.5  C 108.5 834.26  98.6 843.5  86 843.5  C 73.4 843.5  63.5 834.26  63.5 822.5  C 63.5 810.74  73.4 801.5  86 801.5  Z " stroke-width="1" stroke="#797979" fill="none" />
-  </g>
-</svg>
