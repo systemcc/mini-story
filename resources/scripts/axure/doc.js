@@ -164,7 +164,7 @@
         };
 
 
-        var _getScriptIdFromPath = function(path, relativeTo) {
+        var _getScriptIdFromPath = function(path, relativeTo, includeLimbo) {
             var relativePath = [];
             var includeMasterInPath = false;
             if(relativeTo) {
@@ -185,7 +185,7 @@
             }
             var fullPath = relativePath.concat(path);
             var scriptId = _getScriptIdFromFullPath(fullPath);
-            return !$ax.visibility.isScriptIdLimbo(scriptId) && scriptId;
+            return (includeLimbo || !$ax.visibility.isScriptIdLimbo(scriptId)) && scriptId;
         };
         $ax.getScriptIdFromPath = _getScriptIdFromPath;
 
@@ -197,8 +197,8 @@
         };
         $ax.getElementIdsFromPath = _getElementIdsFromPath;
 
-        var _getElementIdFromPath = function(path, params) {
-            var scriptId = _getScriptIdFromPath(path, params.relativeTo);
+        var _getElementIdFromPath = function(path, params, includeLimbo) {
+            var scriptId = _getScriptIdFromPath(path, params.relativeTo, includeLimbo);
             if(!scriptId) return scriptId;
 
             var itemNum = params.itemNum;

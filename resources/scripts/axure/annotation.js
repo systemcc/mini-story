@@ -82,6 +82,13 @@ $axure.internal(function($ax) {
                                 _toggleAnnotationDialog(dObj.id, e);
                                 return false;
                             });
+
+                            var isMaster = $ax.public.fn.IsReferenceDiagramObject(dObj.type);
+                            if (isMaster) {
+                            } else if (!$ax.visibility.IsIdVisible(elementId)) {
+                                var ann = document.getElementById(elementId + "_ann");
+                                if (ann) $ax.visibility.SetVisible(ann, false);
+                            }
                         }
                     }
                 });

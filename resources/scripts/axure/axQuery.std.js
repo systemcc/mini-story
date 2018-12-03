@@ -1287,7 +1287,7 @@ $axure.internal(function($ax) {
         return _boundingRectForIds(childIds);
     };
 
-    var _fixedLocation = function (elementId, size) {
+    var _fixedLocation = function (elementId, position, size) {
         var axObj = $obj(elementId);
         if (!axObj || !axObj.fixedVertical) return { valid: false };
 
@@ -1305,7 +1305,7 @@ $axure.internal(function($ax) {
 
         var horz = axObj.fixedHorizontal;
         if(horz == 'left') {
-            newLeft = windowScrollLeft + axObj.fixedMarginHorizontal;
+            newLeft = windowScrollLeft + position.left;
         } else if(horz == 'center') {
             newLeft = windowScrollLeft + ((windowWidth - width) / 2) + axObj.fixedMarginHorizontal;
         } else if(horz == 'right') {
@@ -1314,7 +1314,7 @@ $axure.internal(function($ax) {
 
         var vert = axObj.fixedVertical;
         if(vert == 'top') {
-            newTop = windowScrollTop + axObj.fixedMarginVertical;
+            newTop = windowScrollTop + position.top;
         } else if(vert == 'middle') {
             newTop = windowScrollTop + ((windowHeight - height) / 2) + axObj.fixedMarginVertical;
         } else if(vert == 'bottom') {
@@ -1395,7 +1395,7 @@ $axure.internal(function($ax) {
             size = { width: jObj.outerWidth(), height: jObj.outerHeight() };
         }
         
-        var fixed = _fixedLocation(elementId, size);
+        var fixed = _fixedLocation(elementId, position, size);
         if(fixed.valid) {
             position.left = fixed.left;
             position.top = fixed.top;
@@ -1461,7 +1461,7 @@ $axure.internal(function($ax) {
             parentIds.push($ax.getScriptIdFromPath([parObj.id], this.id));
             parObj = parObj.parent;
         }
-        var otherParents = $ax('#' + elementId).getParents(true, ['item', 'repeater', 'dynamicPanel', 'layer'])[0];
+        var otherParents = $ax('#' + elementId).getParents(true, ['item', 'repeater', 'dynamicPanel'])[0];
         for (var i = 0; i < otherParents.length; i++) {
             parentIds.push(otherParents[i]);
         }

@@ -232,6 +232,7 @@
                     var now = Date.now();
                     if(now - lastTouch < 375) {
                         if(++touchCount === 3) {
+                            $(':input').blur();
                             $ax.messageCenter.postMessage('tripleClick', true);
                             e.preventDefault();
                         };
