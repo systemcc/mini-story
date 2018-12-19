@@ -2,7 +2,7 @@
 <svg version="1.1" width="122px" height="124px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <mask fill="white" id="clip13">
-      <path d="M 424 573  L 502 573  L 502 592  L 424 592  Z M 401 520  L 523 520  L 523 644  L 401 644  Z " fill-rule="evenodd" />
+      <path d="M 423.5 572  L 502.5 572  L 502.5 594  L 423.5 594  Z M 401 520  L 523 520  L 523 644  L 401 644  Z " fill-rule="evenodd" />
     </mask>
   </defs>
   <g transform="translate(-401 -520 )">
